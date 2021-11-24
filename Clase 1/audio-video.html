@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video y audio</title>
+</head>
+<body>
+    <!-- <video src -->
+    <!-- <video controls autoplay muted loop>
+        <source src="https://www.w3schools.com/html/movie.mp4" type="video/mp4">
+        <source src="https://www.w3schools.com/html/movie.ogg" type="video/ogg">
+    </video>
+    <audio>
+        <source src="https://www.w3schools.com/html/audio.mp3" type="audio/mp3">
+        <source src="https://www.w3schools.com/html/audio.ogg" type="audio/ogg">
+    </audio> -->
+
+
+    <video>
+        <source src="https://www.w3schools.com/html/movie.mp4" type="video/mp4">
+        <source src="https://www.w3schools.com/html/movie.ogg" type="video/ogg">
+    </video>
+    <button type="button" id='play'>
+        Play
+    </button>
+    <button type="button" onclick='video.pause()'>
+        Pause
+    </button>
+    <button type="button" onclick='subirVolumen()'>
+        Subir volumen
+    </button>
+    <button type="button" onclick='bajarVolumen()'>
+        Bajar volumen
+    </button>
+    <script>
+        var video = document.querySelector('video');
+        document.getElementById('play').onclick = function() {
+            video.play()
+        }
+        function bajarVolumen() {
+            video.volume = video.volume - 0.2;
+        }
+        function subirVolumen() {
+            video.volume = video.volume + 0.2;
+        }
+    </script>
+</body>
+</html>
