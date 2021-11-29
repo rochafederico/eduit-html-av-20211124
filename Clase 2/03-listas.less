@@ -1,0 +1,10 @@
+@lista: primario, secundario, terciario, 100px;
+
+each(@lista, {
+    .btn-@{value}-@{index} {
+        color: red;
+    }
+    .panel-@{value} {
+        background-color: red;
+    }
+})

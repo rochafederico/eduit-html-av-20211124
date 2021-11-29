@@ -1,0 +1,26 @@
+
+@link-color: red;
+a {
+    color: @link-color;
+    &:hover {
+        // contexto local
+        @link-hover: darken( @link-color, 50%);
+        color: @link-hover;
+    }
+}
+
+main {
+    display: block;
+    > section {
+        color: red;
+    }
+    > h1,
+    > h2,
+    > h3,
+    > h4,
+    > h5,
+    > h6,
+    > header {
+        color: red;
+    }
+}
