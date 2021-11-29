@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas</title>
+</head>
+
+<body>
+    <canvas id='midibujo' height="600" width="600"></canvas>
+    <button onclick="contexto.restore()">
+        borrar ultima linea
+    </button>
+    <script>
+        var midibujo = document.getElementById('midibujo');
+        var contexto = midibujo.getContext('2d');
+
+        // rectangulo
+        contexto.fillStyle = '#f00';
+        contexto.fillRect(5, 5, 300, 100);
+
+        // texto
+        contexto.fillStyle = '#fff';
+        contexto.font = '20px Arial';
+        contexto.textAlign = 'center'
+        contexto.fillText('Educacion IT', 150, 62.5)
+
+        // guardamos antes de dibujar la linea
+        contexto.save();
+
+        // linea
+        contexto.moveTo(0, 50);
+        contexto.lineTo(200, 50);
+        contexto.strokeStyle = 'blue';
+        contexto.stroke()
+        
+    </script>
+</body>
+
+</html>
