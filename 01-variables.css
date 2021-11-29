@@ -1,0 +1,16 @@
+body {
+  width: 300px;
+  height: 225px;
+}
+a {
+  color: red;
+}
+a:hover {
+  color: #cc0000;
+}
+body::before {
+  content: 'titulo unido';
+}
+.mi-clase-otro-nombre {
+  background-color: brown;
+}

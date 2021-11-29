@@ -1,0 +1,41 @@
+@ancho: 300px;
+@alto: @ancho * (1 / 4 * 3);
+
+body {
+    width: @ancho;
+    height: @alto;
+}
+
+// contexto global
+@link-color: red;
+a {
+    color: @link-color;
+}
+a:hover {
+    // contexto local
+    @link-hover: darken( @link-color, 10%);
+    color: @link-hover;
+}
+
+//p {
+//    color: @link-hover;
+//}
+
+@uno: titulo;
+@dos: 'unido';
+
+
+body::before {
+    @texto: '@{uno} @{dos}';
+    content: @texto;
+}
+
+@selector: mi-clase;
+@nom-prop: background-color;
+
+// .mi-clase {}
+
+@selector: mi-clase-otro-nombre;
+.@{selector} {
+    @{nom-prop}: brown;
+}
