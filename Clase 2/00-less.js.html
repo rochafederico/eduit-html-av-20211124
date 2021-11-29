@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="color" id='color' />
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed soluta quia amet, enim explicabo rerum perspiciatis
+        consequatur ex in laboriosam facilis quas tempora cumque perferendis, alias dignissimos, voluptatem mollitia
+        suscipit!</p>
+    <link rel="stylesheet/less" type="text/css" href="styles.less" />
+    <script src="https://cdn.jsdelivr.net/npm/less@4.1.1"></script>
+    <script>
+        document.getElementById('color').onchange = function (evento) {
+            less.modifyVars({
+                color: evento.target.value
+            })
+        }
+    </script>
+</body>
+
+</html>
