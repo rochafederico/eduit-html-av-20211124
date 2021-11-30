@@ -1,0 +1,37 @@
+//.btn {
+//    border: 1px solid black;
+//}
+
+.btn() {
+    border: 1px solid black;
+}
+
+.redondear(@radius: 15px) {
+    -o-border-radius: @radius;
+    -webkit-border-radius: @radius;
+    -moz-border-radius: @radius;
+    -ms-border-radius: @radius;
+    border-radius: @radius;
+}
+
+.redondeado(@radius: 15px) {
+    .redondear(@radius);
+    &:hover {
+        .redondear(@radius * 2);
+    }
+}
+
+// .btn-redondeado() {
+//     .btn();
+//     .redondeado();
+// }
+
+button {
+    .btn();
+    .redondeado();
+}
+
+a.btn {
+    .btn();
+    .redondeado(50px);
+}
