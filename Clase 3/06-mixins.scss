@@ -1,0 +1,24 @@
+@mixin borde-negro() {
+    border: 1px solid black;
+}
+
+@mixin boton($name, $color: greenyellow) {
+    .btn-#{$name} {
+        background-color: $color;
+        &:hover {
+            background-color: darken($color, 30%);
+        }
+    }
+}
+
+header {
+    @include borde-negro();
+}
+
+nav {
+    @include borde-negro();
+
+    @include boton(primario, red);
+}
+
+@include boton(primario);

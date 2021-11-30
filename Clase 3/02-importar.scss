@@ -1,0 +1,7 @@
+@use 'lib' as libreria;
+@import 'variables';
+
+body {
+    color: $color;
+    background-color: libreria.$color;
+}

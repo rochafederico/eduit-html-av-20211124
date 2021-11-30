@@ -1,0 +1,11 @@
+$algoString: 'algo-por-aca';
+$alhoNombre: algo-mas;
+
+$prop: display;
+$value: flex;
+
+.btn-#{$algoString}-#{$algoString} {
+    color: red;
+    #{$prop}: $value;
+}
+

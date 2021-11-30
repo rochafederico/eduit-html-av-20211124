@@ -1,0 +1,19 @@
+$display: flex;
+
+%flex-con-wrap {
+    display: $display;
+    flex-wrap: wrap;
+}
+
+main {
+    color: black;
+    @extend %flex-con-wrap;
+}
+
+nav ul {
+    @extend %flex-con-wrap;
+}
+
+footer {
+    @extend %flex-con-wrap;
+}
