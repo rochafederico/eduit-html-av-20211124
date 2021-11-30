@@ -1,0 +1,18 @@
+#botones() {
+    // esto solo puede ser leido en este contexto
+    @mivarlocal: 20px;
+
+    // propiedad puede leerse por fuera
+    propidad: 10px;
+    .boton(@name, @color: red) {
+        .btn-@{name} {
+            color: @color;
+            // esto funciona porque fue cargado a nivel global
+            .redondeado();
+            &:hover {
+                @link-hover: darken( @color, 50%);
+                color: @link-hover;
+            }
+        }
+    }
+}
