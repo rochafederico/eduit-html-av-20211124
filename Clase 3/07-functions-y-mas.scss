@@ -1,0 +1,24 @@
+@function sumar($num1, $num2) {
+    $resultado: $num1 + $num2;
+
+
+    @if($resultado > 10 or $resultado < 10) {
+
+    }
+    @if($resultado > 10 and $resultado < 10) {
+
+    }
+
+    @if($resultado > 10) {
+        // @error 'El resultado es mayor que 10';
+        @warn 'El resultado es mayor que 10';
+        @return 10;
+    }
+
+    @return $resultado;
+}
+
+@debug sumar(1, 2);
+
+@debug red !=2;
+@debug sumar(11, 2);

@@ -22,3 +22,21 @@ nav {
 }
 
 @include boton(primario);
+
+$variantes: algo otro-algo primario secundario;
+
+@each $variante in $variantes {
+    @include boton($variante);
+}
+
+$filtros: o ms mix webkit;
+@mixin completar-filtros ($prop, $valor) {
+    #{$prop}: $valor;
+    @each $filtro in $filtros {
+        -#{$filtro}-#{$prop}: $valor;
+    }
+}
+
+nav {
+    @include completar-filtros(border-radius, 5px);
+}
