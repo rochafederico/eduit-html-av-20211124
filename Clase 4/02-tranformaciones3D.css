@@ -1,0 +1,10 @@
+.padre {
+    position: relative;
+
+    perspective: 600px;
+}
+
+.cajita {
+    position: absolute;
+    transform:  rotateZ(20deg) translateZ(-200px);
+}

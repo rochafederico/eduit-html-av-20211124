@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transformaciones y transiciones</title>
+    <link rel="stylesheet" href="01-transformaciones.css">
+    <!-- <link rel="stylesheet" href="02-tranformaciones3D.css"> -->
+    <link rel="stylesheet" href="03-cubo.css">
+</head>
+
+<body>
+    <!-- <div class="cajita"></div>
+    <div class="cajita transformacion"></div>
+    <div class="cajita"></div> -->
+    <!-- <div class='padre'>
+        <div class='cajita'></div>
+    </div> -->
+    <div class="contenedor">
+        <div class='cubo'>
+            <div class='cara atras'></div>
+            <div class='cara adelante'></div>
+            <div class='cara arriba'></div>
+            <div class='cara abajo'></div>
+            <div class='cara izquierda'></div>
+            <div class='cara derecha'></div>
+        </div>
+    </div>
+
+    <script>
+        var grado = 0;
+        setInterval(() => {
+            const cubo = document.querySelector('.cubo');
+            cubo.style.transform = 'rotateY(' + grado + 'deg)';
+            grado++;
+        }, 50);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+.contenedor {
+    position: relative;
+    perspective: 1000px;
+    width: 400px;
+    height: 400px;
+    margin: calc((100vh - 420px) / 2) auto;
+}
+.cubo, .cara  {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+}
+.cubo {
+    transform-style: preserve-3d;
+}
+.cara {
+    border: 1px solid black;
+}
+.atras {
+    transform: translateZ(-200px);
+}
+.adelante {
+    transform: translateZ(200px);
+}
+.izquierda {
+    transform: rotateY(90deg) translateZ(200px);
+}
+.derecha {
+    transform: rotateY(-90deg) translateZ(200px);
+}
+.arriba {
+    transform: rotateX(90deg)  translateZ(200px);
+}
+.abajo {
+    transform: rotateX(90deg) translateZ(-200px);
+}
