@@ -1,0 +1,54 @@
+@use 'sass:map';
+@use 'sass:list';
+
+$mi-map: (primario: greenyellow,
+    'error': red,
+    // map-interno: (
+    //     item: red
+    // )
+);
+
+@each $nombre,
+$valor in $mi-map {
+    a.#{$nombre} {
+        color: $valor;
+    }
+}
+
+@debug map-get($mi-map, error);
+
+$mi-map: map.set($mi-map, 'primario', brown);
+
+@each $nombre,
+$valor in $mi-map {
+    a.#{$nombre} {
+        color: $valor;
+    }
+}
+
+@debug list.length($mi-map);
+// @for $index from 0 to list-lenght($mi-map) {
+// }
+
+$columnas: 16;
+
+// @for $index from 0 to $columnas {
+//     $columna: $index + 1;
+
+//     .col-#{$columna} {
+//         width: 100% / $columnas * $columna;
+//     }
+// }
+
+$count: 1;
+
+// @while $count <= $columnas {
+
+//     $columna: $count;
+
+//     .col-#{$columna} {
+//         width: 100% / $columnas * $columna;
+//     }
+
+//     $count: $count+1;
+// }
