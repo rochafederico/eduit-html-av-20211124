@@ -1,0 +1,25 @@
+@keyframes cielo {
+    100% {
+        transform: translateX(80%);
+    }
+}
+@keyframes coche {
+    100% {
+        transform: translateY(15px);
+    }
+}
+
+#cielo {
+    animation: cielo 15s linear infinite;
+}
+
+#coche
+/* ,
+#ruedas */
+ {
+    animation: coche 1s ease-in-out infinite alternate;
+}
+
+/* #ruedas {
+    animation-direction: alternate-reverse;
+} */
