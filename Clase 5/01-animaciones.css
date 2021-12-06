@@ -1,0 +1,21 @@
+@keyframes miAnimacion {
+    from { /* 0% */
+        height: 200px;
+        background-color: red;
+    }
+    55% {
+        height: 300px;
+    }
+    to { /* 100% */
+        height: 500px;
+        background-color: greenyellow;
+    }
+}
+
+.cajita {
+    /* animation: miAnimacion 1s ease-out; */
+    animation-name: miAnimacion;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 2s;
+}
