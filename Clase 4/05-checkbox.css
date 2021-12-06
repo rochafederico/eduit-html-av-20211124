@@ -1,0 +1,41 @@
+.switch {
+    display: inline-block;
+    height: 38px;
+    width: 72px;
+    border-radius: 19px;
+    background-color: grey;
+    position: relative;
+}
+
+.switch > input {
+    opacity: 0;
+}
+
+.switch > input:checked + span {
+    background-color: greenyellow;
+    left: 38px;
+}
+
+.switch > span {
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    background-color: white;
+    top: 4px;
+    left: 4px;
+
+    transition: 
+    background-color 500ms ease-in-out 400ms,
+    left 500ms ease-out;
+}
+
+/* button:hover .linea {
+    transform: scale(1.2);
+} */
+button .st0 {
+    transition: fill 500ms ease-in-out 400ms;
+}
+button:hover .st0 {
+    fill: red;
+}

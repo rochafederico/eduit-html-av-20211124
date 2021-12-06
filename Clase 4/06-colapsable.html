@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collapsable</title>
+    <style>
+        .colapsable {
+            transition: height 1s ease-in-out;
+            height: 0;
+            overflow: hidden;
+        }
+        .colapsable.activo {
+            height: 140px;
+        }
+    </style>
+</head>
+<body>
+    <details open>
+        <summary>Colapsable</summary>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore accusantium sequi assumenda cumque voluptate consectetur sit quaerat quo perspiciatis aliquam, vel aperiam placeat similique commodi excepturi nemo amet accusamus sapiente!</p>
+    </details>
+
+    <button onclick="palanca()">Palanca</button>
+    <div class='colapsable' id='colapsable'>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic minus assumenda optio omnis harum corporis cum ratione provident, numquam aut voluptates aspernatur pariatur molestias ea veniam ipsa, atque possimus error?</p>
+        <p>Aliquid dicta, labore quo, molestias aperiam quasi tempora, magni temporibus illum quis ipsum quaerat nostrum hic ut repellendus facere et aut. Assumenda, ex possimus. Animi rerum nesciunt quo odit vero!</p>
+        <p>Excepturi, id dolorem dignissimos qui vel sint sunt autem eaque quod! Repellendus ab tempora quis impedit rerum labore amet. Consequuntur, molestiae inventore. Sed aperiam ab dolorum voluptatum incidunt nisi earum.</p>
+    </div>
+    <script>
+        function palanca() {
+            const colapsable = document.getElementById('colapsable');
+            if(colapsable.classList.contains('activo')) {
+                colapsable.classList.remove('activo')
+            } else {
+                colapsable.classList.add('activo')
+            }
+        }
+    </script>
+</body>
+</html>
